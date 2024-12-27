@@ -1,4 +1,16 @@
 # Atividade Prática Linux - PBNOV2024
+Atividade prática realizada para aplicar os conhecimentos adquiridos durante o programa de bolsas.
+
+### Objetivos:
+- Subir um servidor Nginx que deve está online e rodando.
+- Criar um script que valide se o serviço 
+está online e envie o resultado da 
+validação para um diretório definido.
+- O script deve ser personalizado e deve gerar 2 arquivos de 
+saída: 1 para o serviço online e 1 para 
+o serviço offline.
+- O script deve ser executado de a cada 5 minutos.
+
 ## ÍNDICE
 1. [Criar ambiente Linux no Windows com o WSL](#1-criar-ambiente-linux-no-windows-com-o-wsl)
 2. [NGINX](#2-nginx)
