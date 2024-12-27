@@ -166,7 +166,7 @@ crontab -l
 ```
 ![LogOFF](imagem/nginx_offline_log.JPG)
 ### 5.1 Logs ON
--- Visualizar os logs de saída para o serviço online.
+- Visualizar os logs de saída para o serviço online.
 ```bash
  cat /var/log/nginx/serviço_on.log
 ```
