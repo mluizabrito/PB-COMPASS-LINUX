@@ -66,7 +66,7 @@ sudo systemctl enable nginx
 ss -tunelp | grep :80
 ```
 ![tunelp](imagem/ss-tunelp.JPG)
-- Abre no navegador http://localhost para verificar se o NGINX está funcionado corretamente
+- Abra no navegador http://localhost para verificar se o NGINX está funcionado corretamente
 ![localHost](imagem/localHost.jpg)
   
  ### 2.5 Configurar permissões 
