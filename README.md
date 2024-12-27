@@ -47,6 +47,7 @@ sudo apt update
 sudo apt upgrade
 ```
 ### 2.2 Instalar o NGINX
+Instale o nginx
 ```bash
 sudo apt install nginx -y
 ```
