@@ -1,6 +1,6 @@
 # Atividade Prática Linux - PBNOV2024
 ## ÍNDICE
-1. [Criar ambiente Linux no Windows com o WSL](#1-criar-ambiente-linux-no-windoes-com-o-wsl)
+1. [Criar ambiente Linux no Windows com o WSL](#1-criar-ambiente-linux-no-windows-com-o-wsl)
 2. [NGINX](#2-nginx)
 3. [Criação do Script](#3-criacao-do-script)
 4. [Automatizar o Script](#4-automatizar-o-script)
@@ -10,7 +10,7 @@
 
 ## 1. Criar ambiente Linux no Windows com o WSL
 - [Pré-requisitos] Windows 10 versão 2004 ou superior
- Para encontrar a versão do seu windows é só abrir a janela Executar do windows e digitar "winver"
+ Para encontrar a versão do seu windows é só abrir a janela Executar do Windows e digitar "winver"
 - [Instalação-WSL]
  Agora abra o Prompt de Comando do Windows no modo administrador e insira o comando wsl --install e reinicie o computador(como sugerido no terminal). Desse modo, instala o WSL2 e a distribuição padrão Ubuntu
 
@@ -26,9 +26,11 @@ lsb_release -a
 
 ## 2. NGINX
 ### 2.1 Atualizar o sistema
+- Verificar os arquivos que precisam de atualização
 ```bash
 sudo apt update
 ```
+- Atualizar os arquivos
 ```bash
 sudo apt upgrade
 ```
@@ -134,17 +136,20 @@ Abaixo da última linha do arquivo digite o comando abaixo, para automatizar o s
 ```bash
 */5 * * * * /scripts/validar_serviço.sh
 ```
-### 4.3 Verificar se foi se foi escrito corretamente
+### 4.3 Verifique se o comando foi escrito corretamente
+- Digite o comando abaixo para visualizar a tarefa configurada no crontab
 ```bash
 crontab -l
 ```
 ## 5. Analisar os arquivos de log
 ### 5.1 Logs OFF
+- Visualizar os logs de saída para o serviço offline
 ```bash
  cat /var/log/nginx/serviço_off.log
 ```
 ![LogOFF](nginx_offline_log.JPG)
 ### 5.1 Logs ON
+-- Visualizar os logs de saída para o serviço online
 ```bash
  cat /var/log/nginx/serviço_on.log
 ```
