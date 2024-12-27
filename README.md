@@ -61,7 +61,7 @@ sudo systemctl enable nginx
 
 ### 2.4 Verificar Conexão
 - Ir até o diretório /var/log
-- Vai exibir se o nginx possui conexão com a porta :80 porta padrão do protocolo HTTP
+- O comando ss -tunelp | grep :80 vai exibir se o nginx possui conexão com a porta :80, porta padrão do protocolo HTTP
 ```bash
 ss -tunelp | grep :80
 ```
