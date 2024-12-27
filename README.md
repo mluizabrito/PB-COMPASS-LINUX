@@ -66,7 +66,9 @@ sudo systemctl enable nginx
 ss -tunelp | grep :80
 ```
 ![tunelp](imagem/ss-tunelp.JPG)
+
 - Abra no navegador http://localhost para verificar se o NGINX está funcionado corretamente
+
 ![localHost](imagem/localHost.jpg)
   
  ### 2.5 Configurar permissões 
@@ -135,11 +137,14 @@ Para o testar o script com o Nginx ativado digite o comando abaixo
 ./validar_serviço.sh
 ```
 ![nginx_on](imagem/nginx_ON.JPG)
+
 Para testar o serviço offline é necessário desativar o Nginx com o comando systemctl stop nginx.
 ```bash
  sudo systemctl stop nginx
 ```
+
 - Após desativar o serviço, teste o script.
+
 ![nginx_off](imagem/off_nginx.JPG)
 
 ## 4. Automatizar o Script
