@@ -64,6 +64,7 @@ sudo systemctl enable nginx
 ```bash
 ss -tunelp | grep :80
 ```
+![tunelp](imagem/ss-tunelp.JPG)
 - Abre no navegador http://localhost para verificar se o NGINX está funcionado corretamente
 ![localHost](imagem/localHost.jpg)
   
@@ -123,19 +124,21 @@ else
 fi
 ```
 ### 3.4 Permissão de execução do script
+É necessário tornar o script executável, para isso digite:
  ```bash
 sudo chmod +x validar_serviço.sh
 ```
 ### 3.4 Testar execução do script
-Para o Nginx ativado digite
+Para o testar o script com o Nginx ativado digite o comando abaixo
 ```bash
 ./validar_serviço.sh
 ```
 ![nginx_on](imagem/nginx_ON.JPG)
-- Para desativar o Nginx digite
+Para testar o serviço offline é necessário desativar o Nginx com o comando systemctl stop nginx.
 ```bash
  sudo systemctl stop nginx
 ```
+- Após desativar o serviço, teste o script.
 ![nginx_off](imagem/off_nginx.JPG)
 
 ## 4. Automatizar o Script
@@ -144,24 +147,25 @@ Para o Nginx ativado digite
 sudo crontab -e
 ```
 ### 4.2 Executar a cada 5 minutos
-Abaixo da última linha do arquivo digite o comando abaixo, para automatizar o script
+Abaixo da última linha do arquivo digite o comando abaixo, para automatizar o script.
 ```bash
 */5 * * * * /scripts/validar_serviço.sh
 ```
 ### 4.3 Verifique se o comando foi escrito corretamente
-- Digite o comando abaixo para visualizar a tarefa configurada no crontab
+- Digite o comando crontab -l para visualizar a tarefa configurada no crontab.
 ```bash
 crontab -l
 ```
+![crontab](imagem/crontab.JPG)
 ## 5. Analisar os arquivos de log
 ### 5.1 Logs OFF
-- Visualizar os logs de saída para o serviço offline
+- Visualizar os logs de saída para o serviço offline.
 ```bash
  cat /var/log/nginx/serviço_off.log
 ```
 ![LogOFF](imagem/nginx_offline_log.JPG)
 ### 5.1 Logs ON
--- Visualizar os logs de saída para o serviço online
+-- Visualizar os logs de saída para o serviço online.
 ```bash
  cat /var/log/nginx/serviço_on.log
 ```
