@@ -131,7 +131,7 @@ fi
  ```bash
 sudo chmod +x validar_serviço.sh
 ```
-### 3.4 Testar execução do script
+### 3.5 Testar execução do script
 Para o testar o script com o Nginx ativado digite o comando abaixo
 ```bash
 ./validar_serviço.sh
@@ -170,7 +170,7 @@ crontab -l
  cat /var/log/nginx/serviço_off.log
 ```
 ![LogOFF](imagem/nginx_offline_log.JPG)
-### 5.1 Logs ON
+### 5.2 Logs ON
 - Visualizar os logs de saída para o serviço online.
 ```bash
  cat /var/log/nginx/serviço_on.log
