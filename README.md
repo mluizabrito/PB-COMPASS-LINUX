@@ -124,7 +124,7 @@ else
    echo "NGINX OFF"
 fi
 ```
-### 3.4 Permissão de execução do script
+### 3.4 Habilitar execução do script
 É necessário tornar o script executável, para isso digite:
  ```bash
 sudo chmod +x validar_serviço.sh
