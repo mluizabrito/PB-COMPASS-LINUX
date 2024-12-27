@@ -33,7 +33,7 @@ wsl --install
 ```bash
 lsb_release -a
 ```
-![versão-do-ubuntu](ubuntu.JPG)
+![versão-do-ubuntu](imagem/ubuntu.JPG)
 
 
 ## 2. NGINX
@@ -65,7 +65,7 @@ sudo systemctl enable nginx
 ss -tunelp | grep :80
 ```
 - Abre no navegador http://localhost para verificar se o NGINX está funcionado corretamente
-![localHost](localHost.jpg)
+![localHost](imagem/localHost.jpg)
   
  ### 2.5 Configurar permissões 
  No diretório /var/log digite o comando abaixo para definir que o dono tenha permissão total(7), grupo e usuário tenha permissão de leitura e execução(5)
@@ -131,12 +131,12 @@ Para o Nginx ativado digite
 ```bash
 ./validar_serviço.sh
 ```
-![nginx_on](nginx_ON.JPG)
+![nginx_on](imagem/nginx_ON.JPG)
 - Para desativar o Nginx digite
 ```bash
  sudo systemctl stop nginx
 ```
-![nginx_off](off_nginx.JPG)
+![nginx_off](imagem/off_nginx.JPG)
 
 ## 4. Automatizar o Script
 ### 4.1 Crontab
@@ -159,11 +159,11 @@ crontab -l
 ```bash
  cat /var/log/nginx/serviço_off.log
 ```
-![LogOFF](nginx_offline_log.JPG)
+![LogOFF](imagem/nginx_offline_log.JPG)
 ### 5.1 Logs ON
 -- Visualizar os logs de saída para o serviço online
 ```bash
  cat /var/log/nginx/serviço_on.log
 ```
-![log_on](log_on.JPG)
+![log_on](imagem/log_on.JPG)
 
